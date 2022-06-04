@@ -12,7 +12,7 @@ import { UniqueAlterEgoValidatorDirective } from './shared/alter-ego.directive';
     AppComponent,
     ForbiddenValidatorDirective,
     IdentityRevealedValidatorDirective,
-    UniqueAlterEgoValidatorDirective
+    UniqueAlterEgoValidatorDirective,
   ],
   imports: [
     BrowserModule,
