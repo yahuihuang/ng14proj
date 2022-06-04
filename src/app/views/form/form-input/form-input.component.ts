@@ -30,6 +30,7 @@ export class FormInputComponent implements OnInit {
       ]),
       alterEgo: new FormControl(this.hero.alterEgo, {
         asyncValidators: [this.alterEgoValidator.validate.bind(this.alterEgoValidator)],
+        /** 你可以把 updateOn 屬性從 change（預設值）改成 submit 或 blur 來推遲表單驗證的更新時機。 */
         updateOn: 'blur'
       }),
       power: new FormControl(this.hero.power, Validators.required)
