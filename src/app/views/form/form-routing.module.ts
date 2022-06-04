@@ -1,3 +1,4 @@
+import { FormInputComponent } from './form-input/form-input.component';
 import { NameEditorComponent } from './name-editor/name-editor.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -12,6 +13,10 @@ const routes: Routes = [
     path: 'nameEditor',
     component: NameEditorComponent
   },
+  {
+    path: 'formInput',
+    component: FormInputComponent
+  }
 ];
 
 @NgModule({

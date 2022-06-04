@@ -4,18 +4,21 @@ import { CommonModule } from '@angular/common';
 import { FormRoutingModule } from './form-routing.module';
 import { FormComponent } from './form.component';
 import { NameEditorComponent } from './name-editor/name-editor.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormInputComponent } from './form-input/form-input.component';
 
 
 @NgModule({
   declarations: [
     FormComponent,
-    NameEditorComponent
+    NameEditorComponent,
+    FormInputComponent
   ],
   imports: [
     CommonModule,
     FormRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   exports: [
     NameEditorComponent,
