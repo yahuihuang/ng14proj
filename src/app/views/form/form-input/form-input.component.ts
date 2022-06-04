@@ -33,7 +33,11 @@ export class FormInputComponent implements OnInit {
         updateOn: 'blur'
       }),
       power: new FormControl(this.hero.power, Validators.required)
-    },  { validators: identityRevealedValidator }); // <-- add custom validator at the FormGroup level
+    },
+    {
+      // 要想給 FormGroup 新增驗證器，就要在建立時把一個新的驗證器傳給它的第二個引數。
+      validators: identityRevealedValidator
+    }); // <-- add custom validator at the FormGroup level
   }
 
   get name() {
