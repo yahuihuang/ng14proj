@@ -47,5 +47,11 @@
       <input type="text" formControlName="zip">
     </label>
   </div>
-  <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+
+  <p>
+    <button (click)="updateProfile()">Update Profile</button>
+  </p>
+  <p>
+    <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+  </p>
 </form>

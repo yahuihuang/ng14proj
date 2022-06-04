@@ -32,4 +32,13 @@ export class NameEditorComponent implements OnInit {
     // TODO: Use EventEmitter with form value
     console.warn(this.profileForm.value);
   }
+
+  updateProfile() {
+    this.profileForm.patchValue({
+      firstName: 'Grace',
+      address: {
+        street: '220 Drew Street Taipei'
+      }
+    });
+  }
 }
