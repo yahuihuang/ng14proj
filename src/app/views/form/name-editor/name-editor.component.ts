@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-name-editor',
@@ -27,6 +27,9 @@ export class NameEditorComponent implements OnInit {
       state: [''],
       zip: ['']
     }),
+    aliases: this.fb.array([
+      this.fb.control('')
+    ]),
   });
 
   constructor(private fb: FormBuilder) {
@@ -52,5 +55,13 @@ export class NameEditorComponent implements OnInit {
         street: '220 Drew Street Taipei'
       }
     });
+  }
+
+  get aliases() {
+    return this.profileForm.get('aliases') as FormArray;
+  }
+
+  addAlias() {
+    this.aliases.push(this.fb.control(''));
   }
 }
